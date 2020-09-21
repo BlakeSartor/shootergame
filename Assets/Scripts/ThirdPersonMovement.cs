@@ -19,6 +19,12 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;
     Vector3 velocity;
     bool isGrounded;
+    bool isCameraUnlocked = false;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     void Update()
     {
@@ -34,14 +40,41 @@ public class ThirdPersonMovement : MonoBehaviour
 
         Vector3 dir = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if (dir.magnitude >= 0.1f)
+        if (Input.GetMouseButtonDown(2))
         {
-            float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            if (isCameraUnlocked)
+            {
+                isCameraUnlocked = false;
+            }
+            else
+            {
+                isCameraUnlocked = true;
+            }
+        }
 
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+        if (isCameraUnlocked)
+        {
+            if (dir.magnitude >= 0.1f)
+            {
+                float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+                transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+                Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            }
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0f, cam.eulerAngles.y, 0f);
+
+            if (dir.magnitude >= 0.1f)
+            {
+                float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+
+                Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            }
         }
 
         if (Input.GetButtonDown("Jump") && isGrounded)
