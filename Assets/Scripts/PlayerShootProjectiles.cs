@@ -46,7 +46,7 @@ public class PlayerShootProjectiles : MonoBehaviour
                 Target target = rayHit.transform.GetComponent<Target>();
                 if (target != null)
                 {
-                    target.TakeDamage(gunDamage);
+                    //target.TakeDamage(gunDamage);
                 }
 
                 if (rayHit.rigidbody != null)
