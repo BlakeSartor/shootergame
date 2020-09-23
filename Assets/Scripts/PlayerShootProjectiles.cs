@@ -34,13 +34,15 @@ public class PlayerShootProjectiles : MonoBehaviour
     void SpawnVFX()
     {
         GameObject vfx;
-
+        Vector3 aimPoint;
         if (firePoint != null)
         {
             RaycastHit rayHit;
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out rayHit, gunRange))
             {
-                Debug.Log(rayHit.transform.name);
+                aimPoint = rayHit.point;
+                
+                
                 Target target = rayHit.transform.GetComponent<Target>();
                 if (target != null)
                 {
@@ -51,10 +53,17 @@ public class PlayerShootProjectiles : MonoBehaviour
                 {
                     //rayHit.rigidbody.AddForce(-rayHit.normal * impactForce);
                 }
+                Debug.Log("jere");
+            }
+            else
+            {
+                aimPoint = fpsCam.transform.position + fpsCam.transform.forward * gunRange;
             }
 
+
+            
             vfx = Instantiate(effectToSpawn, firePoint.transform.position, Quaternion.identity);
-            vfx.transform.LookAt(rayHit.point);
+            vfx.transform.LookAt(aimPoint);
         }
         else
         {
