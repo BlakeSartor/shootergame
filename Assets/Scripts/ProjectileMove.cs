@@ -26,4 +26,10 @@ public class ProjectileMove : MonoBehaviour
         }
         
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        speed = 0;
+        Destroy(gameObject);
+    }
 }
