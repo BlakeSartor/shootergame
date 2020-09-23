@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &74725893
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &199404570
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &263428022
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &345408099
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -881,7 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &601427768
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -915,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &611254799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1395,7 +1395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &863421739
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &979143961
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &1044263500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &1051238156
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1937,7 +1937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &1169199841
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1971,7 +1971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &1182412261
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2163,9 +2163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fpsCam: {fileID: 1687258584}
-  gunDamage: 10
   gunRange: 100
-  impactForce: 30
   cam: {fileID: 1687258585}
   firePoint: {fileID: 1421973778}
   vfx:
@@ -3911,7 +3909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &1792825590
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4350,7 +4348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &1898618821
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4607,7 +4605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &1997830092
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4743,7 +4741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c946cddbfd070a34ab51cf5ebcf2fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
 --- !u!54 &2144776973
 Rigidbody:
   m_ObjectHideFlags: 0
