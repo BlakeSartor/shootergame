@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -11,7 +12,9 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public float jumpHeight = 3f;
     public float groundDistance = 0.4f;
-    public float speed = 6f;
+    private float speed;
+    public float runSpeed = 500f;
+    public float walkSpeed = 6f;
     public float gravity = -9.81f;
     public float turnSmoothTime = 0.1f;
     public LayerMask groundMask;
@@ -39,6 +42,17 @@ public class ThirdPersonMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         Vector3 dir = new Vector3(horizontal, 0f, vertical).normalized;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = runSpeed;
+        }
+        else
+        {
+            speed = walkSpeed;
+
+        }
+
 
         if (Input.GetMouseButtonDown(2))
         {

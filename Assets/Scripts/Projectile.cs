@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    public GameObject muzzlePrefab;
+    public GameObject projectileHitPrefab;
+
     public float damage;
     public float speed;
     public float fireRate;
@@ -12,6 +15,11 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (muzzlePrefab != null)
+        {
+            var muzzleVFX = Instantiate(muzzlePrefab, transform.position, Quaternion.identity);
+            muzzleVFX.transform.forward = gameObject.transform.forward;
+        }
         StartCoroutine(SelfDestruct());
     }
 
@@ -38,6 +46,16 @@ public class Projectile : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         speed = 0;
+
+        ContactPoint contact = collision.contacts[0];
+        Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
+        Vector3 pos = contact.point;
+
+        if (projectileHitPrefab != null)
+        {
+            var hitVFX = Instantiate(projectileHitPrefab, pos, rot);
+        }
+
         Destroy(gameObject);
         Debug.Log(collision.transform.name);
 
