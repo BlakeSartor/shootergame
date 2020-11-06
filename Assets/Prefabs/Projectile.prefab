@@ -51,9 +51,9 @@ MonoBehaviour:
   muzzlePrefab: {fileID: 1232324091781682122, guid: 6dc2036abec714a44a718d3fcbfc01d5, type: 3}
   projectileHitPrefab: {fileID: 3186185586274682461, guid: a26737d94c5762d47abdf40136b5e90a, type: 3}
   damage: 10
-  speed: 100
+  speed: 75
   fireRate: 4
-  impactForce: 5000
+  impactForce: 2
 --- !u!65 &5930913026811528506
 BoxCollider:
   m_ObjectHideFlags: 0
